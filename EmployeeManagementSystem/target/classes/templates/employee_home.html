@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Dashboard</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f4f7;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 26px;
+        }
+
+        .dashboard-links {
+            margin-top: 40px;
+        }
+
+        a {
+            display: inline-block;
+            margin: 10px 20px;
+            padding: 12px 20px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        .logout {
+            background-color: #dc3545;
+        }
+
+        .logout:hover {
+            background-color: #b02a37;
+        }
+    </style>
+</head>
+<body>
+<h2>Welcome, <span th:text="${username}"></span>!</h2>
+
+<div class="dashboard-links">
+    <a th:href="@{/apply-leave}">Apply for Leave</a>
+    <a th:href="@{/logout}" class="logout">Logout</a>
+</div>
+</body>
+</html>
